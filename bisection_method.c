@@ -29,6 +29,7 @@ int main() {
 
 float function_fx(float x) {
     return (x * x) - 25;
+    // return pow((3 * x), 2) - (6 * x) + 2;
 }
 
 void calculate(float error, float f1, float f2, float x1, float x2) {
@@ -50,9 +51,12 @@ void calculate(float error, float f1, float f2, float x1, float x2) {
             f1 = f3;
         }
 
+        // Display values at each step
+        printf("x1 = %f, x2 = %f, x3 = %f, f1 = %f, f2 = %f\n", x1, x2, x3, f1, f2);
+
     } while (fabsf(f3) > error);
 
     // Print the result
-    printf("The root is %f", x3);
+    printf("The root is %f\n", x3);
 }
 
